@@ -47,8 +47,7 @@ a. 0 if the instruction without immediate value (has an address)
 b. 1 if the instruction with immediate value
 
 
-
-FULL INSTRUCTION SET OF modi-SIC
+# FULL INSTRUCTION SET OF modi-SIC
 
 Mnemonic   Format   Opcode  Effect
 
