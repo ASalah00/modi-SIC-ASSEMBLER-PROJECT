@@ -49,68 +49,69 @@ b. 1 if the instruction with immediate value
 
 
 FULL INSTRUCTION SET OF modi-SIC
-Mnemonic Format Opcode Effect
 
-ADD m 3/4 18 A <-- (A) + (m..m+2)
+Mnemonic   Format   Opcode  Effect
 
-AND m 3/4 40 A <-- (A) & (m..m+2)
+ADD m       3/4     18 A <-- (A)  + (m..m+2)
 
-COMP m 3/4 28 A : (m..m+2)
+AND m       3/4     40 A <-- (A)  & (m..m+2)
 
-DIV m 3/4 24 A : (A) / (m..m+2)
+COMP m       3/4    28 A : (m..m+2)
 
-J m 3/4 3C PC <-- m
+DIV m       3/4      24 A : (A) / (m..m+2)
 
-JEQ m 3/4 30 PC <-- m if CC set to =
+J m       3/4       3C PC <-- m
 
-JGT m 3/4 34 PC <-- m if CC set to >
+JEQ m       3/4       30 PC <-- m if CC set to =
 
-JLT m 3/4 38 PC <-- m if CC set to <
+JGT m       3/4       34 PC <-- m if CC set to >
 
-JSUB m 3/4 48 L <-- (PC); PC <-- m
+JLT m       3/4       38 PC <-- m if CC set to <
 
-LDA m 3/4 00 A <-- (m..m+2)
+JSUB m       3/4       48 L <-- (PC); PC <-- m
 
-LDCH m 3/4 50 A [rightmost byte] <-- (m)
+LDA m       3/4       00 A <-- (m..m+2)
 
-LDL m 3/4 08 L <-- (m..m+2)
+LDCH m       3/4       50 A [rightmost byte] <-- (m)
 
-LDX m 3/4 04 X <-- (m..m+2)
+LDL m       3/4       08 L <-- (m..m+2)
 
-MUL m 3/4 20 A <-- (A) * (m..m+2)
+LDX m       3/4       04 X <-- (m..m+2)
 
-OR m 3/4 44 A <-- (A) | (m..m+2)
+MUL m       3/4       20 A <-- (A) * (m..m+2)
 
-RD m 3/4 D8 A [rightmost byte] <-- data
+OR m       3/4       44 A <-- (A) | (m..m+2)
 
-RSUB 3/4 4C PC <-- (L)
+RD m       3/4       D8 A [rightmost byte] <-- data
 
-STA m 3/4 0C m..m+2 <-- (A)
+RSUB       3/4       4C PC <-- (L)
 
-STCH m 3/4 54 m <-- (A) [rightmost byte]
+STA m       3/4       0C m..m+2 <-- (A)
 
-STL m 3/4 14 m..m+2 <-- (L)
+STCH m       3/4       54 m <-- (A) [rightmost byte]
 
-STSW m 3/4 E8 m..m+2 <-- (SW)
+STL m       3/4       14 m..m+2 <-- (L)
 
-STX m 3/4 10 m..m+2 <-- (X)
+STSW m       3/4       E8 m..m+2 <-- (SW)
 
-SUB m 3/4 1C A <-- (A) - (m..m+2)
+STX m       3/4       10 m..m+2 <-- (X)
 
-TD m 3/4 E0 Test device specified by (m)
+SUB m       3/4       1C A <-- (A) - (m..m+2)
 
-TIX m 3/4 2C X <-- (X) + 1; (X) : (m..m+2)
+TD m       3/4       E0 Test device specified by (m)
 
-WD m 3/4 DC Device specified by (m) <-- (A)[rightmost byte]
+TIX m       3/4       2C X <-- (X) + 1; (X) : (m..m+2)
 
-FIX 1 C4 A <- (F) [Convert to integer]
+WD m       3/4       DC Device specified by (m) <-- (A)[rightmost byte]
 
-FLOAT 1 C0 F <- (A) [Convert to floating]
+FIX          1       C4 A <- (F) [Convert to integer]
 
-HIO 1 F4 Halt I/O channel number (A)
+FLOAT       1       C0 F <- (A) [Convert to floating]
 
-NORM 1 C8 F <- (F) [normalized]
+HIO       1       F4 Halt I/O channel number (A)
 
-SIO 1 F0 Start I/O channel number (A); address of channel program is given by (S)
+NORM       1       C8 F <- (F) [normalized]
 
-TIO 1 F8 Test I/O channel number (A)
+SIO       1       F0 Start I/O channel number (A); address of channel program is given by (S)
+
+TIO       1       F8 Test I/O channel number (A)
