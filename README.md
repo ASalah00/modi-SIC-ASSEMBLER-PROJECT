@@ -28,7 +28,7 @@ The program should produce as output:
 Pass 2 should read the intermediate file and produce: object code for all program lines 
 The program should produce as output:
 • (outpass2.txt) that contains the corresponding object code of the input program
-
+• (HTE.txt) that contains the corresponding object code of the input program in HTE format.
 
 Immediate Instruction format in modi-SIC
 All Type 3 instruction could be immediate instructions.
